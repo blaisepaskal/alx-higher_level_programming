@@ -1,9 +1,6 @@
-let b = process.argv[2];
-function printFirstParameter(b) {
-  if (arguments.length === 0) {
-    console.log("No argument");
-  } else {
-    console.log(b);
-  }
+#!/usr/bin/node
+if (process.argv[2] === undefined) {
+  console.log('No argument');
+} else {
+  console.log(process.argv[2]);
 }
-printFirstParameter(b);

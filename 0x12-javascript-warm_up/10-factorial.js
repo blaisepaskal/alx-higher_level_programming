@@ -1,9 +1,12 @@
-let factorial =1 ; 
-let b = process.argv[2];
-function calcFactorial(x){
-for (let i=1; i<x ; i++){ 
-    factorial = factorial *(i+1); 
+#!/usr/bin/node
+const numb = process.argv[2];
+
+function factorial (numb) {
+  if (numb <= 1 || isNaN(numb)) {
+    return 1;
+  } else {
+    return numb * factorial(numb - 1);
+  }
 }
-    console.log(factorial);
-}
-calcFactorial(b);
+
+console.log(factorial(numb));

@@ -1,7 +1,6 @@
-let b = process.argv[2];
-function printMyNumber(i) {
-  if (i == "number") {
-    console.log("Not a number");
-  } else console.log("My number: " + Number(i));
+#!/usr/bin/node
+if (isNaN(process.argv[2]) || process.argv[2] === undefined) {
+  console.log('Not a number');
+} else {
+  console.log('My number:', parseInt(process.argv[2]));
 }
-printMyNumber(b);

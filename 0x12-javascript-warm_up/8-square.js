@@ -1,11 +1,9 @@
-
-let b = process.argv[2];
-function drawSquare(x) {
-  if (typeof x === "number" || x >=0) {
-     for (let i = 0; i < x; i++) console.log("X".repeat(x));
-
-  } else {
-    console.log("missing size");
+#!/usr/bin/node
+const sqr = process.argv[2];
+if (isNaN(sqr)) {
+  console.log('Missing size');
+} else {
+  for (let x = 0; x < sqr; x++) {
+    console.log('X'.repeat(sqr));
   }
 }
-drawSquare(b);
